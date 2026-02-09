@@ -25,6 +25,12 @@ Os testes estão organizados em suítes na pasta `cypress/e2e/`:
 | `filtro.cy.js` | • Filtragem por status "Ativo"<br>• Limpeza de filtros |
 | `navegação.cy.js` | • Navegação entre telas (Botão Voltar) |
 
+## 📚 Documentação e Planejamento
+Este projeto conta com um plano de testes detalhado, mapeamento de bugs e estratégia de automação
+
+👉 **([CLIQUE AQUI PARA VER O PLANO DE TESTES COMPLETO NO NOTION](https://www.notion.so/Plano-de-Testes-Gest-o-de-Funcion-rios-SEA-Tecnologia-302a31df9d3380439fc9c0105daf4940?source=copy_link))**
+
+
 ## 💻 Como Rodar o Projeto
 
 ### Pré-requisitos
