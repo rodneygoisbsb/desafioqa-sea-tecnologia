@@ -117,7 +117,7 @@ describe('Cadastro de Funcionários', () => {
         const name = faker.person.fullName();
         const cpf = faker.string.numeric(11);
         const rg = faker.string.numeric(7);
-        
+
         const sexos = ['Masculino', 'Feminino']
         const sexoSorteado = Cypress._.sample(sexos)
 
@@ -125,7 +125,7 @@ describe('Cadastro de Funcionários', () => {
 
         cy.contains('button', '+ Adicionar Funcionário').click()
 
-        cy.contains('h2','Adicionar Funcionário')
+        cy.contains('h2', 'Adicionar Funcionário')
             .should('be.visible')
 
         cy.get('button[role="switch"]')
@@ -173,7 +173,7 @@ describe('Cadastro de Funcionários', () => {
 
         cy.contains('button', '+ Adicionar Funcionário').click()
 
-        cy.contains('h2','Adicionar Funcionário')
+        cy.contains('h2', 'Adicionar Funcionário')
             .should('be.visible')
 
         cy.get('button[role="switch"]')
@@ -236,7 +236,7 @@ describe('Cadastro de Funcionários', () => {
 
         cy.contains('button', '+ Adicionar Funcionário').click()
 
-        cy.contains('h2','Adicionar Funcionário')
+        cy.contains('h2', 'Adicionar Funcionário')
             .should('be.visible')
 
         cy.contains('button', 'Salvar').click()
