@@ -14,8 +14,6 @@ describe('Cadastro de Funcionários', () => {
         const cpf = faker.string.numeric(11);
         const rg = faker.string.numeric(7);
 
-        //const cpfFormatted = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-
         cy.intercept('POST', '**/employees').as('postCadastro')
 
         cy.contains('button', '+ Adicionar Funcionário').click()
@@ -54,8 +52,6 @@ describe('Cadastro de Funcionários', () => {
         const name = faker.person.fullName();
         const cpf = faker.string.numeric(11);
         const rg = faker.string.numeric(7);
-
-        //const cpfFormatted = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
 
         cy.intercept('POST', '**/employees').as('postCadastro')
 
@@ -125,8 +121,6 @@ describe('Cadastro de Funcionários', () => {
         const sexos = ['Masculino', 'Feminino']
         const sexoSorteado = Cypress._.sample(sexos)
 
-        //const cpfFormatted = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-
         cy.intercept('POST', '**/employees').as('postCadastro')
 
         cy.contains('button', '+ Adicionar Funcionário').click()
@@ -163,12 +157,6 @@ describe('Cadastro de Funcionários', () => {
         cy.contains('Funcionário(s)')
             .should('be.visible')
 
-        // Usei 'exist' em vez de 'be.visible' aqui por uma limitação do sistema:
-        // O scroll da lista está bugado e, se a lista crescer, o elemento sai da viewport e o teste iria dá um falso negativo
-        // cy.contains(name, { timeout: 10000 })
-        //     .should('exist')
-        // cy.contains(cpfFormatted, { timeout: 10000 })
-        //     .should('exist')
 
     })
 
@@ -180,8 +168,6 @@ describe('Cadastro de Funcionários', () => {
 
         const sexos = ['Masculino', 'Feminino']
         const sexoSorteado = Cypress._.sample(sexos)
-
-        //const cpfFormatted = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
 
         cy.intercept('POST', '**/employees').as('postCadastro')
 
